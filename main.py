@@ -1,14 +1,4 @@
-# TODO 1: function to convert the text to morse:
-def to_morse_code(text: str) -> str:
-    """
-    converts text to morse code
-    :param text: the text user wants to convert.
-    :return: the morse code of the text
-    """
-    pass
-
-
-# TODO 2: get morse code for alphabets and numbers in a dictionary
+# TODO 1: get morse code for alphabets and numbers in a dictionary
 morse_code = {
     'A': '.-',    'B': '-...',  'C': '-.-.',  'D': '-..',   'E': '.',
     'F': '..-.',  'G': '--.',   'H': '....',  'I': '..',    'J': '.---',
@@ -24,9 +14,29 @@ morse_code = {
     '"': '.-..-.', '$': '...-..-', '@': '.--.-.', ' ': '/'  # Space as separator
 }
 
-# TODO 3: prompt the user for his or her text and return the word
-Texts = input('Enter a Text you want to convert to morse code: ').upper()
-Texts = list(Texts)
+# TODO 2: prompt the user for user text
 
-for Text in Texts:
-    print(morse_code[Text])
+end = False
+while not end:
+
+    Texts = input('Enter a Text you want to convert to morse code: ').upper()
+    if Texts == '':
+        print('input a text')
+    else:
+        Texts = list(Texts)
+
+    # TODO 3: converting without function
+    if Texts:
+        print('morse code:')
+        for Text in Texts:
+            try:
+                print(f'{morse_code[Text]}', end=" ")
+            except KeyError:
+                print(f'\n "{Text}" is not a morse code alphabet, try again!', end='')
+        print('\n')
+        # prompt user to continue conversion
+    if_continue = input('do you want to write another text (yes/no): ')
+    if if_continue == 'no':
+        print('\n # ----------------- #')
+        end = True
+
