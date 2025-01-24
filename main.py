@@ -25,7 +25,7 @@ while not end:
     else:
         Texts = list(Texts)
 
-    # TODO 3: converting without function
+    # TODO 3: converting the text to morse code without function
     if Texts:
         print('morse code:')
         for Text in Texts:

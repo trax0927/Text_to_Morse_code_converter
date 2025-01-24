@@ -1,0 +1,61 @@
+# Virtual Environment
+venv/
+env/
+.venv/
+.env/
+
+# Environment Variables
+.env
+*.env
+!.env.example
+.csv
+
+# Python Specific
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Flask Specific
+instance/
+.webassets-cache
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Logs
+*.log
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Build outputs
+build/
+dist/
+*.egg-info/
+
+# Backup files
+*.bak
+*.gho
+*.ori
+*.orig
+*.tmp
